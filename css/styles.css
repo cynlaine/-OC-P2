@@ -10,6 +10,10 @@ body {
     margin: auto;
     padding: 0 3em 0 3em;
 }
+a {
+    text-decoration: none;
+    color: inherit
+}
 
 /* HEADER */
 
@@ -24,15 +28,12 @@ header {
 }
 .headerNav {
     display: flex;
-    position: right;
     margin: 0;
 }
 .headerLink {
-    font-weight: 700;
-    text-decoration: none;
+    font-weight: 400;
     padding: 2em;
     border-top: 2px solid transparent;
-    color: #000000;
 }
 .headerLink:hover {
     border-top: 2px solid #0065FC;
@@ -44,11 +45,13 @@ header {
 .search {
     display: flex;
     flex-direction: column;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
 }
 .searchTitle {
     font-weight: 700;
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 0.5em;
 }
 .searchSubtitle {
     font-weight: 400;
@@ -58,17 +61,18 @@ header {
 .searchForm {
     display: flex;
     flex-direction: row;
-    align-items: center stretch;
+    align-items: stretch;
     height: 50px;
 }
 .searchFormLocationIcon {
     background-color: #D9D9D9;
     border-radius: 15px 0 0 15px;
     padding: 15px;
-    font-size: 1.1em;
+    font-size: 20px;
 }
 .searchFormInput {
     border: 1px solid #D9D9D9;
+    width: 240px;
     padding: 0 15px 0 15px
 }
 .searchFormInput::placeholder {
@@ -95,13 +99,14 @@ header {
     flex-direction: row;
     align-items: center;
     margin-top: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 .filtersTitle {
     display:inline-block;
     font-size: large;
     font-weight: 700;
-    margin-right: 1rem;
+    margin-left: 10px;
+    margin-right: 0.5rem;
 }
 .filterBox {
     display: flex;
@@ -112,13 +117,13 @@ header {
     padding: 4px 20px;
     border-radius: 25px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    margin: 0 1rem;
+    margin: 0 1.5rem;
 }
 .filterBox:hover {
     background-color: #DEEBFF;
 }
 .filterBoxIcon {
-    font-size: 1.1em;
+    font-size: 22px;
     color: #0065FC;
 }
 .filterBoxText {
@@ -147,3 +152,83 @@ header {
 .infobarText {
     font-weight: 400;
 }
+
+/* OFFERS SECTION */
+
+.offers {
+    display: flex;
+    flex-direction: row;
+}
+.offers h2 {
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0;
+}
+.offers h3 {
+    font-weight: 700;
+    font-size: 16px;
+}
+.offers p {
+    font-weight: 400;
+    font-size: 14px;
+}
+.offers .fa-star {
+    font-size: 12px;
+    color: #0065FC;
+}
+.fa-star.grey {
+    color: #F2F2F2;
+}
+.rating {
+    display: flex;
+    flex-direction: row;
+}
+
+/* MAIN SECTION */
+
+.mainOffers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    width: 880px;
+    height: 626px;
+    border-radius: 20px;
+    padding: 40px;
+}
+.mainOffers h3,
+.mainOffers p,
+.mainOffers .rating {
+    margin: 4px 0 2px 16px;
+}
+.mainOffersWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.mainOffersCard {
+    display: flex;
+    flex-direction: column;
+    width: 246px;
+    height: 199px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+.mainOffersCard:hover {
+    filter: drop-shadow(3px 3px 15px rgba(0, 0, 0, 0.2));
+    cursor: pointer;
+}
+.mainOffersCard img {
+    height: 124px;
+    object-fit: cover;
+    border: 5px solid #FFFFFF;
+    border-radius: 20px 20px 0px 0px;
+}
+.mainOffersViewMore {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+}
+/* SPONSORED SECTION */
+
