@@ -203,7 +203,6 @@ header {
 .mainOffers {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: #F2F2F2;
     width: 68%;
     height: fit-content;
@@ -214,6 +213,7 @@ header {
 .mainOffersWrap {
     display: flex;
     flex-wrap: wrap;
+    margin: 30px 0;
     gap: 30px;
 }
 .mainOffersCard {
@@ -358,8 +358,8 @@ footer {
     background-color: #F2F2F2;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding-top: 45px;
 }
 .footerHeader {
     font-weight: 700;
