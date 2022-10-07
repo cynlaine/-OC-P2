@@ -107,24 +107,26 @@ header {
     align-items: center;
     margin: 30px 0;
     flex-wrap: wrap;
+    width: 75%;
+    justify-content: space-between;
 }
 .filtersTitle {
     display:inline-block;
     font-size: 18px;
     font-weight: 700;
-    margin-left: 10px;
-    margin-right: 32px;
+    padding: 10px;
+    justify-self: flex-start;
 }
 .filterBox {
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: #ffffff;
+    min-height: 18px;
     border: 2px solid #D9D9D9;
     padding: 4px 20px;
     border-radius: 25px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    margin: 0 2% 0 0;
 }
 .filterBox:hover {
     background-color: #DEEBFF;
@@ -203,7 +205,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     background-color: #F2F2F2;
-    width: 880px;
+    width: 68%;
     height: fit-content;
     min-height: 626px;
     border-radius: 20px;
@@ -218,7 +220,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 246px;
-    height: 200px;
+    height: 199px;
     background-color: #ffffff;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -252,7 +254,8 @@ header {
     flex-direction: column;
     justify-content: space-between;
     background-color: #F2F2F2;
-    width: 420px;
+    width: 32%;
+    min-width: 420px;
     height: fit-content;
     min-height: 626px;
     border-radius: 20px;
