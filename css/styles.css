@@ -90,6 +90,7 @@ header {
 .searchFormButton {
     background-color: #0065FC;
     border-radius: 0 15px 15px 0;
+    padding: 15px;
     border: none;
     cursor: pointer;
 }
@@ -97,11 +98,11 @@ header {
     font-weight: 700;
     font-size: 18px;
     color: white;
-    margin: 10px;
 }
 .fa-magnifying-glass {
-    visibility: hidden;
-    font-size: 0.5px;
+    font-size: 18px;
+    color: white;
+    display: none;
 }
 
 /* FILTERS SECTION */
@@ -112,8 +113,6 @@ header {
     align-items: center;
     margin: 30px 0;
     flex-wrap: wrap;
-    width: 80%;
-    gap: 20px;
 }
 .filtersTitle {
     display:inline-block;
@@ -122,25 +121,31 @@ header {
     padding: 10px;
     justify-self: flex-start;
 }
-.filterBox {
+.filtersWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+.filtersButton {
     display: flex;
     flex-direction: row;
+    flex-shrink: 0;
     align-items: center;
     background-color: #ffffff;
-    min-height: 18px;
+    height: 48px;
     border: 2px solid #D9D9D9;
     padding: 4px 20px;
     border-radius: 25px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.filterBox:hover {
+.filtersButton:hover {
     background-color: #DEEBFF;
 }
-.filterBoxIcon {
+.filtersButtonIcon {
     font-size: 22px;
     color: #0065FC;
 }
-.filterBoxText {
+.filtersButtonText {
     padding: 10px 0 10px 10px;
     font-weight: 700;
 }
@@ -209,7 +214,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color: #F2F2F2;
-    width: 68%;
+    width: 100%;
     min-height: 626px;
     height: fit-content;
     border-radius: 20px;
@@ -262,8 +267,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     background-color: #F2F2F2;
-    width: 32%;
-    min-width: 420px;
+    width: 420px;
     height: 626px;
     border-radius: 20px;
     padding: 40px;
@@ -355,11 +359,16 @@ header {
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
 }
+.activitiesTitle {
+    display: flex;
+    padding: 5px 10px 5px 20px;
+    height: 50px;
+    align-items: center;
+    margin: 0;
+}
 .activitiesCard h3 {
     font-weight: 700;
     font-size: 16px;
-    margin-left: 20px;
-    align-items: center;
 }
 
 /* FOOTER */
@@ -384,15 +393,10 @@ footer li {
     margin-bottom: 15px
 }
 
-/* TABLET 768-992px */
+/* TABLET 768-991px */
 
 @media screen and (max-width: 991px)
 {
-    .filters {
-        width: auto;
-        gap: 10px;
-        justify-content: flex-start;
-    }
     .offers {
         flex-direction: column;
     }
@@ -440,18 +444,12 @@ footer li {
         object-fit: cover;
         border-radius: 20px 20px 0px 0px;
     }
-    .activitiesCard h3 {
-        margin: 5px 5px 10px 15px;
-    }
 }
 
 @media screen and (max-width: 767px)
 {
     body {
         padding: 0;
-    }
-    main {
-        padding: 0 30px;
     }
     header {
         height: 110px;
@@ -477,6 +475,9 @@ footer li {
         border-top: 2px solid transparent;
         border-bottom: 2px solid #0065FC;
     }
+    .search {
+        padding: 0 20px;
+    }
     .search >h1 {
         margin-top: 30px;
     }
@@ -484,29 +485,79 @@ footer li {
         margin: 35px 0;
     }
     .searchFormButtonText {
-        visibility: hidden;
-        font-size: 0.1px;
-        margin: 0px;
+        display: none;
     }
     .fa-magnifying-glass {
-        visibility: visible;
-        font-size: 18px;
-        margin: 10px 10px 10px 6px;
-        color: white;
+        display: block;
     }
     .filters {
-        margin: 0 0 30px 0;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
     }
-    .filterBox {
+    .filtersTitle {
+        align-self: flex-start;
+        padding: 0;
+        margin-bottom: 18px;
+    }
+    .filtersWrap {
+        gap: 10px;
+    }
+    .filtersButton {
         width: 160px;
         filter: none;
         font-size: 11px;
         padding: 4px 15px; 
     }
-    .filterBoxIcon {
+    .filtersButtonIcon {
         font-size: 16px;
     }
     .offers {
         flex-direction: column-reverse;
+    }
+    .sponsoredOffers {
+        border-radius: 0%;
+        width: 100%;
+        min-width: none;
+        padding: 30px 20px 40px 20px;
+    }
+    .sponsoredOffersWrap {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .sponsoredOffersCard {
+        max-width: 100%;
+        min-height: 144px;
+        max-height: 144px;
+    }
+    .mainOffers {
+        padding: 0 20px;
+        background-color: #FFFFFF;
+        border-radius: 0%;
+    }
+    .activities {
+        padding: 0 20px;
+    }
+    .activitiesContainer {
+        flex-direction: column;
+        gap: 20px;
+        height: fit-content;
+    }
+    .activitiesCard {
+        width: 100%;
+        height: 190px;
+    }
+    .activitiesCard img {
+        height: 134px;
+    }
+    footer {
+        flex-direction: column;
+        height: fit-content;
+        padding: 45px 30px 0px 30px;
+    }
+    footer ul {
+        width: 100%;
+        margin-bottom: 45px;
     }
 }
