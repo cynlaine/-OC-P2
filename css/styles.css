@@ -22,7 +22,11 @@ ul {
     margin: 0;
 }
 
+
+
 /* HEADER */
+
+
 
 header {
     display: flex;
@@ -49,7 +53,11 @@ header {
     color: #0065FC; 
 }
 
+
+
 /* SEARCH SECTION */
+
+
 
 .search {
     display: flex;
@@ -102,10 +110,16 @@ header {
 .fa-magnifying-glass {
     font-size: 18px;
     color: white;
+}
+.searchFormButtonIcon {
     display: none;
 }
 
+
+
 /* FILTERS SECTION */
+
+
 
 .filters {
     display: flex;
@@ -173,7 +187,11 @@ header {
     font-size: 16px;
 }
 
+
+
 /* OFFERS SECTION */
+
+
 
 .offers {
     display: flex;
@@ -208,7 +226,13 @@ header {
     flex-direction: row;
 }
 
+
+
+
 /* MAIN SECTION */
+
+
+
 
 .mainOffers {
     display: flex;
@@ -260,7 +284,11 @@ header {
     font-size: 18px;
 }
 
+
+
 /* SPONSORED SECTION */
+
+
 
 .sponsoredOffers {
     display: flex;
@@ -322,7 +350,11 @@ header {
     margin-top: auto;
 }
 
+
+
 /* ACTIVITIES SECTION */
+
+
 
 .activities {
     display: flex;
@@ -371,7 +403,11 @@ header {
     font-size: 16px;
 }
 
+
+
 /* FOOTER */
+
+
 
 footer {
     height: 220px;
@@ -393,7 +429,15 @@ footer li {
     margin-bottom: 15px
 }
 
-/* TABLET 768-991px */
+
+
+
+
+/* TABLET >=768 px */
+
+
+
+
 
 @media screen and (max-width: 991px)
 {
@@ -446,6 +490,15 @@ footer li {
     }
 }
 
+
+
+
+
+/*   PHONE < 768px  */
+
+
+
+
 @media screen and (max-width: 767px)
 {
     body {
@@ -487,7 +540,7 @@ footer li {
     .searchFormButtonText {
         display: none;
     }
-    .fa-magnifying-glass {
+    .searchFormButtonIcon {
         display: block;
     }
     .filters {
