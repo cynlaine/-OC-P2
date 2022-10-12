@@ -518,7 +518,6 @@ footer li {
     .sponsoredOffers {
         border-radius: 0%;
         width: 100%;
-        min-width: none;
         padding: 30px 20px 40px 20px;
     }
     .sponsoredOffersWrap {
@@ -555,6 +554,7 @@ footer li {
         flex-direction: column;
         height: fit-content;
         padding: 45px 30px 0px 30px;
+        border: 1px red solid;
     }
     footer ul {
         width: 100%;
