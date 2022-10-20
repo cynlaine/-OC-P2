@@ -537,6 +537,9 @@ footer li {
     .searchForm {
         margin: 35px 0;
     }
+    .searchFormInput {
+        width: 60%;
+    }
     .searchFormButtonText {
         display: none;
     }
